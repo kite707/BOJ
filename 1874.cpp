@@ -6,7 +6,7 @@ using namespace std;
 class Node {
 public:
 	Node* next;
-	char elem;
+	int elem;
 };
 
 class Stack {
@@ -32,9 +32,9 @@ public:
 	bool empty() {
 		return(head->next == trailer);
 	}
-	char pop() {
+	int pop() {
 		if (empty()) {
-			return 'j';
+			return -1;
 		}
 		else {
 			Node* cur = head->next;
@@ -48,7 +48,7 @@ public:
 			return -1;
 		}
 		return head->next->elem;
-		
+
 	}
 
 };
@@ -62,7 +62,7 @@ int main() {
 	for (int i = 0; i < k; i++) {
 		int j;
 		cin >> j;
-		vec.push_back(j); //vec¿¡ 43687421ÀúÀåµÊ
+		vec.push_back(j);
 	}
 	int stacknum = 1;
 	for (int i = 0; i < k; i++) {
@@ -78,12 +78,12 @@ int main() {
 		}
 	}
 	if (st.empty()) {
-		for (int i = 0; i < str.length()-1; i++) {
+		for (int i = 0; i < str.length(); i++) {
 			cout << str[i] << "\n";
 		}
-		cout << str[str.length() - 1];
 	}
 	else {
-		cout << "NO";
+		cout << "NO\n";
 	}
+	return 0;
 }
