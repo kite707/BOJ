@@ -54,36 +54,24 @@
 //};
 //
 //int main() {
-//	int k;
-//	cin >> k;
+//	int counter;
+//	cin >> counter;
 //	Stack st;
-//	vector <int> vec;
-//	string str = "";
-//	for (int i = 0; i < k; i++) {
-//		int j;
-//		cin >> j;
-//		vec.push_back(j);
-//	}
-//	int stacknum = 1;
-//	for (int i = 0; i < k; i++) {
-//		int curnum = vec[i];
-//		while (stacknum <= curnum) {
-//			st.push(stacknum);
-//			str += "+";
-//			stacknum++;
-//		}
-//		if (st.top() == vec[i]) {
+//	while (counter > 0) {
+//		int inin;
+//		cin >> inin;
+//
+//		if (inin == 0) {
 //			st.pop();
-//			str += "-";
 //		}
-//	}
-//	if (st.empty()) {
-//		for (int i = 0; i < str.length(); i++) {
-//			cout << str[i] << "\n";
+//		else {
+//			st.push(inin);
 //		}
+//		counter--;
 //	}
-//	else {
-//		cout << "NO\n";
+//	int sum = 0;
+//	while (!st.empty()) {
+//		sum += st.pop();
 //	}
-//	return 0;
+//	cout << sum;
 //}
